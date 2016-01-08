@@ -63,7 +63,7 @@ cite:newton-1991-copper
 cite:kitchingroup-blog,apa-multitasking,li-2010-oxygen-pd,boes-2015-estim-bulk,boes-2015-estim-bulk-si,thirumalai-2015-pt-pd
 
 
-- integration with git
+- integration with git/github
 
 
 ** <2016-01-22 Fri>
