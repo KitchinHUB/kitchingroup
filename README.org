@@ -3,9 +3,68 @@
 * Group meetings
 
 ** <2016-01-08 Fri>
-- Introduction
-- Kenate - introduction
-- hackathon - one cool solution, one problem to solve
+- First rule of the Kitchin Research Group
+  - Be on time.
+
+- Introductions
+  - Kenate (bulk Pd neural network)
+
+  - MS students - introduction
+    - Feiyang (ternary alloy phase behavior)
+    - Teng    (ternary alloy segregation)
+    - Tianyu  (neural adsorbates)
+    - Akshay (neural oxide)
+    - Chen   (neural oxide)
+    - Devon  (H2 separation on 2D materials)
+
+- Graduating people
+  - Zhongnan
+  - Alex
+
+- New PhD student
+  - Elif (microfluidic characterization of CO2 capture solvents)
+
+- Review of 2015
+  - 14 papers!
+
+- 2016 research overview
+  - Machine learning in alloy and oxide simulation
+    - Phase behavior
+    - Surface segregation
+    - Reactivity
+  - precipitating CO2 solvents
+  - jmax dominates the scientific writing world
+    - ox-manuscript + templates
+    - track-changes and merge
+    - collaborative writing
+
+- Kenate presentation
+
+*** hackathon - jmax and org-ref
+
+See the jmax menu
+
+M-x ore  for help on org-elements
+
+| 5 | 6 |
+|---+---|
+| 3 | 4 |
+| 4 | 5 |
+| 4 | 5 |
+See the Org->org-ref->Help menu
+
+Track-changes!!!{++ add new words++}
+
+
+{--Some text that clearly should be deleted.--}
+
+Put a comment ->   <- in here.
+cite:newton-1991-copper
+cite:kitchingroup-blog,apa-multitasking,li-2010-oxygen-pd,boes-2015-estim-bulk,boes-2015-estim-bulk-si,thirumalai-2015-pt-pd
+
+
+- integration with git
+
 
 ** <2016-01-22 Fri>
 - Jake - tutorial (20 minutes)
