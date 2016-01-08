@@ -2,7 +2,8 @@
 
 * Group meetings
 
-** <2016-01-08 Fri>
+** DONE <2016-01-08 Fri>
+   CLOSED: [2016-01-08 Fri 18:22]
 - First rule of the Kitchin Research Group
   - Be on time.
 
@@ -55,15 +56,18 @@ See the Org->org-ref->Help menu
 
 Track-changes!!!{++ add new words++}
 
-
 {--Some text that clearly should be deleted.--}
 
 Put a comment ->   <- in here.
-cite:newton-1991-copper
-cite:kitchingroup-blog,apa-multitasking,li-2010-oxygen-pd,boes-2015-estim-bulk,boes-2015-estim-bulk-si,thirumalai-2015-pt-pd
 
-
+Future hackathon topics:
 - integration with git/github
+- bibtexery
+
+bibliographystyle:unsrt
+bibliography:~/Dropbox/bibliography/references.bib
+
+
 
 
 ** <2016-01-22 Fri>
