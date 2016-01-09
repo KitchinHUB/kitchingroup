@@ -1,10 +1,11 @@
 #+TITLE: Learn to use org-mode
 
-First, watch this [[http://kitchingroup.cheme.cmu.edu/media/2014-07-12-Org-mode-is-awesome/why-org-mode.org][video in Youtube]]. Then, download this [[http://kitchingroup.cheme.cmu.edu/media/2014-07-12-Org-mode-is-awesome/why-org-mode.org][org file]], open it in Emacs, and try some of the things in the video.
+First, watch this [[http://kitchingroup.cheme.cmu.edu/media/2014-07-12-Org-mode-is-awesome/why-org-mode.org][video in Youtube]] on why org-mode is so awesome. It will show you a lot of things that can be done with org-mode. Then, download this [[http://kitchingroup.cheme.cmu.edu/media/2014-07-12-Org-mode-is-awesome/why-org-mode.org][org file]], open it in Emacs, and try some of the things in the video.
 
 The documentation at http://orgmode.org/org.html is pretty helpful if you like reading in a browser.
 
-You can read the installed documentation by clicking on this link: info:org
+You can read the installed documentation by clicking on this link: info:org.
+
 * jmax
 
 Click this link: elisp:jmax-help to open the jmax manual.
