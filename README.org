@@ -2,7 +2,7 @@
 
 Welcome to the Kitchin Research group.
 
-- [[./group-meetings.org][Group meetings]]
+- [[./group-meetings-2015.org][Group meeting]]
 
 * Resources
 - [[./org-mode.org][Learn org-mode]]
