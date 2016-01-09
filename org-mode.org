@@ -6,6 +6,8 @@ The documentation at http://orgmode.org/org.html is pretty helpful if you like r
 
 You can read the installed documentation by clicking on this link: info:org.
 
+Note: This file is meant to be read in Emacs. Some parts of it won't work if you are reading it on GitHUB in a browser.
+
 * jmax
 To use org-mode the way the Kitchin Group does, you will need to run jmax. You can get it at https://github.com/jkitchin/jmax.
 
