@@ -1,0 +1,16 @@
+#+TITLE: Learn to use org-mode
+
+First, watch this [[http://kitchingroup.cheme.cmu.edu/media/2014-07-12-Org-mode-is-awesome/why-org-mode.org][video in Youtube]]. Then, download this [[http://kitchingroup.cheme.cmu.edu/media/2014-07-12-Org-mode-is-awesome/why-org-mode.org][org file]], open it in Emacs, and try some of the things in the video.
+
+The documentation at http://orgmode.org/org.html is pretty helpful if you like reading in a browser.
+
+You can read the installed documentation by clicking on this link: info:org
+* jmax
+
+Click this link: elisp:jmax-help to open the jmax manual.
+
+* org-ref
+
+Click this link: elisp:org-ref-help to open the org-ref manual.
+
+See this [[https://www.youtube.com/watch?v=2t925KRBbFc][video]] on YouTube to see some examples of org-ref in action.
