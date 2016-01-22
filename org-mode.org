@@ -15,6 +15,7 @@ To use org-mode the way the Kitchin Group does, you will need to run jmax. You c
 
 Click this link: elisp:jmax-help to open the jmax manual.
 
+
 * org-ref
 
 Click this link: elisp:org-ref-help to open the org-ref manual.

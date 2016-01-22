@@ -74,6 +74,8 @@ bibliography:~/Dropbox/bibliography/references.bib
 - Kenate - research (20 minutes)
 - hackathon - one cool solution, one problem to solve
 
+Track changes elisp:jmax-help
+
 ** <2016-02-05 Fri>
 - Devon - lit review 2D hydrogen transport (15 minutes)
 - Feiyang - lit review on modeling ternary alloy phase behavior  (15 minutes)
