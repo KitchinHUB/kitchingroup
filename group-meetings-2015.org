@@ -74,7 +74,9 @@ bibliography:~/Dropbox/bibliography/references.bib
 - Kenate - research (20 minutes)
 - hackathon - one cool solution, one problem to solve
 
-Track changes elisp:jmax-help
+Track changes - Jake's manuscript
+
+ elisp:jmax-help
 
 ** <2016-02-05 Fri>
 - Devon - lit review 2D hydrogen transport (15 minutes)
