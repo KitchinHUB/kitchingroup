@@ -68,15 +68,16 @@ bibliography:~/Dropbox/bibliography/references.bib
 
 
 
-** <2016-01-22 Fri>
+** DONE <2016-01-22 Fri>
+   CLOSED: [2016-01-25 Mon 13:59]
 - Jake - tutorial (20 minutes)
 - Alex - research (20 minutes)
-- Kenate - research (20 minutes)
 - hackathon - one cool solution, one problem to solve
 
-Track changes - Jake's manuscript
-
  elisp:jmax-help
+
+Track changes - [[file:~/computational-materials/manuscript.org]]
+
 
 ** <2016-02-05 Fri>
 - Devon - lit review 2D hydrogen transport (15 minutes)
