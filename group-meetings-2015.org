@@ -79,12 +79,24 @@ bibliography:~/Dropbox/bibliography/references.bib
 Track changes - [[file:~/computational-materials/manuscript.org]]
 
 
-** <2016-02-05 Fri>
+** DONE <2016-02-05 Fri>
+   CLOSED: [2016-02-15 Mon 10:48]
 - Devon - lit review 2D hydrogen transport (15 minutes)
 - Feiyang - lit review on modeling ternary alloy phase behavior  (15 minutes)
 - Tianyu - lit review of Oxygen on Pd surfaces  (15 minutes)
 - Teng Ma - lit review on alloy segregation  (15 minutes)
 - hackathon - one cool solution, one problem to solve
+
+Slide numbers, No animations, no timing, no themes, keep it so simple.
+Practice with pointer, and not reading
+
+$\exp{x}$  $$\exp{x}$$
+
+\(\exp{x}\)  \[\exp{x}\]
+
+@@latex:\ce{CO_{2}}@@  CO_{2}  \ce{H2SO4}  H_{2}SO_{4}  @@latex:H_2SO_4@@
+
+
 
 ** <2016-02-19 Fri>
 - Elif - lit review on amine solvent CO2 capture  (15 minutes)
