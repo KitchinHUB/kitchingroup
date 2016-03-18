@@ -196,7 +196,8 @@ print(5 * a)
 
 #+END_SRC
 
-** <2016-03-04 Fri> group meeting
+** DONE <2016-03-04 Fri> group meeting
+   CLOSED: [2016-03-18 Fri 14:51]
 - Jake research (20 minutes)
 - Kenate research (20 minutes)
 - Alex - research (20 minutes)
