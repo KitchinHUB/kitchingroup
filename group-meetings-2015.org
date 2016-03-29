@@ -203,13 +203,22 @@ print(5 * a)
 - Alex - research (20 minutes)
 - hackathon - one cool solution, one problem to solve
 
-** <2016-03-18 Fri>
+** DONE <2016-03-18 Fri>
+   CLOSED: [2016-03-29 Tue 10:31]
 - Elif - research (20 minutes)
 - Devon - project proposal (10 minutes)
 - Feiyang - project proposal (10 minutes)
 - Tianyu - project proposal (10 minutes)
 - Teng Ma - project proposal (10 minutes)
 - hackathon - one cool solution, one problem to solve
+
+
+#+BEGIN_SRC python
+
+print(5)
+
+#+END_SRC
+
 
 ** <2016-04-01 Fri>
 - Jake research (20 minutes)
