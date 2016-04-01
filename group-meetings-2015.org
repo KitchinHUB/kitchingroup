@@ -226,6 +226,161 @@ print(5)
 - Alex - research (20 minutes)
 - hackathon - one cool solution, one problem to solve
 
+Jake has this ase-database. He would like to interact with it via Emacs
+
+#+BEGIN_SRC sh
+ase-db 2016-04-01/example-db1.db
+#+END_SRC
+
+#+RESULTS:
+#+begin_example
+id|age|user |formula|pbc|  volume|charge|    mass
+ 1|23d|jacob|O4Pd36 |TTT|1259.067| 0.000|3895.118
+ 2|23d|jacob|Pd36   |TTT|1042.634| 0.000|3831.120
+ 3|23d|jacob|Pd36   |TTT|1136.308| 0.000|3831.120
+ 4|23d|jacob|Pd36   |TTT|1414.688| 0.000|3831.120
+ 5|23d|jacob|Pd36   |TTT|1441.506| 0.000|3831.120
+ 6|23d|jacob|Pd36   |TTT|1468.576| 0.000|3831.120
+ 7|23d|jacob|Pd36   |TTT|1495.898| 0.000|3831.120
+ 8|23d|jacob|Pd36   |TTT|1523.472| 0.000|3831.120
+ 9|23d|jacob|Pd36   |TTT|1551.297| 0.000|3831.120
+10|23d|jacob|Pd36   |TTT|1579.374| 0.000|3831.120
+11|23d|jacob|Pd36   |TTT|1607.703| 0.000|3831.120
+12|23d|jacob|Pd36   |TTT|1636.284| 0.000|3831.120
+13|23d|jacob|Pd36   |TTT|1665.117| 0.000|3831.120
+14|23d|jacob|Pd36   |TTT|1694.201| 0.000|3831.120
+15|23d|jacob|Pd36   |TTT|1723.537| 0.000|3831.120
+16|23d|jacob|Pd36   |TTT|1753.125| 0.000|3831.120
+17|23d|jacob|Pd36   |TTT|1782.965| 0.000|3831.120
+18|23d|jacob|Pd36   |TTT|1813.057| 0.000|3831.120
+19|23d|jacob|O5Pd36 |TTT|1259.067| 0.000|3911.117
+20|23d|jacob|O5Pd36 |TTT|1259.067| 0.000|3911.117
+Rows: 110 (showing first 20)
+#+end_example
+
+#+BEGIN_SRC emacs-lisp
+(mapcar (lambda (s) (split-string s "|"))
+	(split-string
+	 (shell-command-to-string
+	  "ase-db 2016-04-01/example-db1.db") "\n"))
+#+END_SRC
+
+#+RESULTS:
+|                           id | age | user  | formula | pbc |   volume | charge |     mass |
+|                            1 | 23d | jacob | O4Pd36  | TTT | 1259.067 |  0.000 | 3895.118 |
+|                            2 | 23d | jacob | Pd36    | TTT | 1042.634 |  0.000 | 3831.120 |
+|                            3 | 23d | jacob | Pd36    | TTT | 1136.308 |  0.000 | 3831.120 |
+|                            4 | 23d | jacob | Pd36    | TTT | 1414.688 |  0.000 | 3831.120 |
+|                            5 | 23d | jacob | Pd36    | TTT | 1441.506 |  0.000 | 3831.120 |
+|                            6 | 23d | jacob | Pd36    | TTT | 1468.576 |  0.000 | 3831.120 |
+|                            7 | 23d | jacob | Pd36    | TTT | 1495.898 |  0.000 | 3831.120 |
+|                            8 | 23d | jacob | Pd36    | TTT | 1523.472 |  0.000 | 3831.120 |
+|                            9 | 23d | jacob | Pd36    | TTT | 1551.297 |  0.000 | 3831.120 |
+|                           10 | 23d | jacob | Pd36    | TTT | 1579.374 |  0.000 | 3831.120 |
+|                           11 | 23d | jacob | Pd36    | TTT | 1607.703 |  0.000 | 3831.120 |
+|                           12 | 23d | jacob | Pd36    | TTT | 1636.284 |  0.000 | 3831.120 |
+|                           13 | 23d | jacob | Pd36    | TTT | 1665.117 |  0.000 | 3831.120 |
+|                           14 | 23d | jacob | Pd36    | TTT | 1694.201 |  0.000 | 3831.120 |
+|                           15 | 23d | jacob | Pd36    | TTT | 1723.537 |  0.000 | 3831.120 |
+|                           16 | 23d | jacob | Pd36    | TTT | 1753.125 |  0.000 | 3831.120 |
+|                           17 | 23d | jacob | Pd36    | TTT | 1782.965 |  0.000 | 3831.120 |
+|                           18 | 23d | jacob | Pd36    | TTT | 1813.057 |  0.000 | 3831.120 |
+|                           19 | 23d | jacob | O5Pd36  | TTT | 1259.067 |  0.000 | 3911.117 |
+|                           20 | 23d | jacob | O5Pd36  | TTT | 1259.067 |  0.000 | 3911.117 |
+| Rows: 110 (showing first 20) |     |       |         |     |          |        |          |
+|                              |     |       |         |     |          |        |          |
+
+A loopy way to do that.
+#+BEGIN_SRC emacs-lisp
+(loop for s in (split-string
+		(shell-command-to-string
+		 "ase-db 2016-04-01/example-db1.db") "\n")
+      collect (split-string s "|"))
+#+END_SRC
+
+#+RESULTS:
+|                           id | age | user  | formula | pbc |   volume | charge |     mass |
+|                            1 | 23d | jacob | O4Pd36  | TTT | 1259.067 |  0.000 | 3895.118 |
+|                            2 | 23d | jacob | Pd36    | TTT | 1042.634 |  0.000 | 3831.120 |
+|                            3 | 23d | jacob | Pd36    | TTT | 1136.308 |  0.000 | 3831.120 |
+|                            4 | 23d | jacob | Pd36    | TTT | 1414.688 |  0.000 | 3831.120 |
+|                            5 | 23d | jacob | Pd36    | TTT | 1441.506 |  0.000 | 3831.120 |
+|                            6 | 23d | jacob | Pd36    | TTT | 1468.576 |  0.000 | 3831.120 |
+|                            7 | 23d | jacob | Pd36    | TTT | 1495.898 |  0.000 | 3831.120 |
+|                            8 | 23d | jacob | Pd36    | TTT | 1523.472 |  0.000 | 3831.120 |
+|                            9 | 23d | jacob | Pd36    | TTT | 1551.297 |  0.000 | 3831.120 |
+|                           10 | 23d | jacob | Pd36    | TTT | 1579.374 |  0.000 | 3831.120 |
+|                           11 | 23d | jacob | Pd36    | TTT | 1607.703 |  0.000 | 3831.120 |
+|                           12 | 23d | jacob | Pd36    | TTT | 1636.284 |  0.000 | 3831.120 |
+|                           13 | 23d | jacob | Pd36    | TTT | 1665.117 |  0.000 | 3831.120 |
+|                           14 | 23d | jacob | Pd36    | TTT | 1694.201 |  0.000 | 3831.120 |
+|                           15 | 23d | jacob | Pd36    | TTT | 1723.537 |  0.000 | 3831.120 |
+|                           16 | 23d | jacob | Pd36    | TTT | 1753.125 |  0.000 | 3831.120 |
+|                           17 | 23d | jacob | Pd36    | TTT | 1782.965 |  0.000 | 3831.120 |
+|                           18 | 23d | jacob | Pd36    | TTT | 1813.057 |  0.000 | 3831.120 |
+|                           19 | 23d | jacob | O5Pd36  | TTT | 1259.067 |  0.000 | 3911.117 |
+|                           20 | 23d | jacob | O5Pd36  | TTT | 1259.067 |  0.000 | 3911.117 |
+| Rows: 110 (showing first 20) |     |       |         |     |          |        |          |
+|                              |     |       |         |     |          |        |          |
+
+Let's turn this into a function with selection. No db query here.
+
+#+BEGIN_SRC emacs-lisp
+(defun ase-db-info (s)
+  (with-help-window (help-buffer)
+      (princ
+       (shell-command-to-string
+	(format "ase-db \"abc.db\" id=%s -l" (s-trim (car (split-string s "|"))))))))
+
+(ivy-read "Select: " (split-string  (shell-command-to-string
+				     "ase-db --limit=0 2016-04-01/example-db1.db") "\n")
+	  :require-match t
+	  :action '(1
+		    ("i" ase-db-info "Info")))
+#+END_SRC
+
+#+RESULTS:
+: 110|23d|jacob|O5Pd36 |TTT|1259.067| 0.000|3911.117
+
+
+Now we use a query.
+
+#+BEGIN_SRC emacs-lisp
+(defvar db "/Users/jkitchin/Dropbox/KitchinHUB/kitchingroup/2016-04-01/example-db1.db"
+  "The database.")
+
+(helm :sources
+      (helm-build-async-source "ase-db"
+	:delayed t
+	:candidates-process (lambda ()
+			      (start-process
+			       "ase-db" nil
+			       "ase-db" db helm-pattern))
+	:action '(("Info" . (lambda (s)
+			      (with-help-window (help-buffer)
+				(princ
+				 (shell-command-to-string
+				  (format "ase-db %s id=%s -l"
+					  db
+					  (s-trim (car (split-string s "|")))))))))
+		  ("View" . (lambda (s)
+			      (let ((py (format "from ase.visualize import view
+from ase.io import read
+atoms = read(\"%s@%s\")
+view(atoms)
+" db  (s-trim (car (split-string s "|")))))
+				    (tf)
+				    (temporary-file-directory "."))
+				(setq tf (make-temp-file "py-" ))
+				(with-temp-file tf
+				  (insert py))
+				(call-process "python" tf)
+				(delete-file tf))))))
+      :buffer "*helm async source*")
+#+END_SRC
+
+#+RESULTS:
+
 ** <2016-04-15 Fri>
 - Elif - research (20 minutes)
 - Chen Wang - project proposal (10 minutes)
