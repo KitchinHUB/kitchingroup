@@ -192,10 +192,6 @@ print(5 * a)
 #+RESULTS:
 : 25
 
-#+BEGIN_SRC python
-
-#+END_SRC
-
 ** DONE <2016-03-04 Fri> group meeting
    CLOSED: [2016-03-18 Fri 14:51]
 - Jake research (20 minutes)
@@ -229,34 +225,15 @@ print(5)
 Jake has this ase-database. He would like to interact with it via Emacs
 
 #+BEGIN_SRC sh
-ase-db 2016-04-01/example-db1.db
+ase-db --limit 15 2016-04-01/example-db1.db id=70
 #+END_SRC
 
 #+RESULTS:
-#+begin_example
-id|age|user |formula|pbc|  volume|charge|    mass
- 1|23d|jacob|O4Pd36 |TTT|1259.067| 0.000|3895.118
- 2|23d|jacob|Pd36   |TTT|1042.634| 0.000|3831.120
- 3|23d|jacob|Pd36   |TTT|1136.308| 0.000|3831.120
- 4|23d|jacob|Pd36   |TTT|1414.688| 0.000|3831.120
- 5|23d|jacob|Pd36   |TTT|1441.506| 0.000|3831.120
- 6|23d|jacob|Pd36   |TTT|1468.576| 0.000|3831.120
- 7|23d|jacob|Pd36   |TTT|1495.898| 0.000|3831.120
- 8|23d|jacob|Pd36   |TTT|1523.472| 0.000|3831.120
- 9|23d|jacob|Pd36   |TTT|1551.297| 0.000|3831.120
-10|23d|jacob|Pd36   |TTT|1579.374| 0.000|3831.120
-11|23d|jacob|Pd36   |TTT|1607.703| 0.000|3831.120
-12|23d|jacob|Pd36   |TTT|1636.284| 0.000|3831.120
-13|23d|jacob|Pd36   |TTT|1665.117| 0.000|3831.120
-14|23d|jacob|Pd36   |TTT|1694.201| 0.000|3831.120
-15|23d|jacob|Pd36   |TTT|1723.537| 0.000|3831.120
-16|23d|jacob|Pd36   |TTT|1753.125| 0.000|3831.120
-17|23d|jacob|Pd36   |TTT|1782.965| 0.000|3831.120
-18|23d|jacob|Pd36   |TTT|1813.057| 0.000|3831.120
-19|23d|jacob|O5Pd36 |TTT|1259.067| 0.000|3911.117
-20|23d|jacob|O5Pd36 |TTT|1259.067| 0.000|3911.117
-Rows: 110 (showing first 20)
-#+end_example
+: id|age|user |formula|pbc|  volume|charge|    mass
+: 70|23d|jacob|O4Pd36 |TTT|1259.067| 0.000|3895.118
+: Rows: 1
+
+We can turn that into a table, or list of entries like this:
 
 #+BEGIN_SRC emacs-lisp
 (mapcar (lambda (s) (split-string s "|"))
@@ -325,22 +302,119 @@ A loopy way to do that.
 
 Let's turn this into a function with selection. No db query here.
 
+
 #+BEGIN_SRC emacs-lisp
-(defun ase-db-info (s)
-  (with-help-window (help-buffer)
-      (princ
-       (shell-command-to-string
-	(format "ase-db \"abc.db\" id=%s -l" (s-trim (car (split-string s "|"))))))))
+(defun ase-db-info (s) (message-box "%S" s)
+       (with-help-window (help-buffer)
+	 (princ
+	  (shell-command-to-string
+	   (format "ase-db 2016-04-01/example-db1.db id=%s -l" (s-trim (car (split-string s "|"))))))))
+
+
+(defun ase-db-view (s)
+  (let ((py (format "from ase.visualize import view
+from ase.io import read
+atoms = read(\"%s@%s\")
+view(atoms)
+" "2016-04-01/example-db1.db" (s-trim (car (split-string s "|")))))
+	(tf)
+	(temporary-file-directory "."))
+    (setq tf (make-temp-file "py-" ))
+    (with-temp-file tf
+      (insert py))
+    (call-process "python" tf)
+    (delete-file tf)))
 
 (ivy-read "Select: " (split-string  (shell-command-to-string
 				     "ase-db --limit=0 2016-04-01/example-db1.db") "\n")
 	  :require-match t
 	  :action '(1
+		    ("v" ase-db-view "View")
 		    ("i" ase-db-info "Info")))
 #+END_SRC
 
 #+RESULTS:
-: 110|23d|jacob|O5Pd36 |TTT|1259.067| 0.000|3911.117
+:  62|23d|jacob|O4Pd36 |TTT|1259.067| 0.000|3895.118
+
+
+#+BEGIN_EXAMPLE
+(let ((py (format "from ase.visualize import view
+from ase.io import read
+atoms = read(\"%s@%s\")
+view(atoms)
+" "2016-04-01/example-db1.db" (s-trim (car (split-string s "|")))))
+#+END_EXAMPLE
+
+#+BEGIN_SRC emacs-lisp
+(let ((py (format "from ase.visualize import view
+from ase.io import read
+atoms = read(\"%s@%s\")
+view(atoms)
+" "2016-04-01/example-db1.db" 1))
+      (tf)
+      (temporary-file-directory "."))
+  (setq tf (make-temp-file "py-" ))
+  (with-temp-file tf
+    (insert py))
+  (call-process "python" tf)
+  (delete-file tf))
+#+END_SRC
+
+#+RESULTS:
+
+#+BEGIN_SRC emacs-lisp
+(defmacro hy (body)
+  `(let* ((temporary-file-directory ".")
+	  (tempfile (make-temp-file "hy-")))
+     (with-temp-file tempfile
+       (mapc (lambda (form) (insert (format "%s" form))) ,body))
+     (read (unwind-protect
+	       (shell-command-to-string
+		(format "hy %s" tempfile))
+	     (delete-file tempfile)))))
+
+(hy '((import ase.visualize)
+      (import ase.io)
+      (setv atoms (ase.io.read "2016-04-01/example-db1.db@1"))
+      (ase.visualize.view atoms)))
+#+END_SRC
+
+#+RESULTS:
+: Traceback
+
+#+BEGIN_SRC hy
+(import [ase.visualize [view]])
+      (import [ase.io [read]])
+      (setv atoms (read "2016-04-01/example-db1.db@1"))
+(view atoms)
+#+END_SRC
+
+#+RESULTS:
+#+begin_example
+Traceback (most recent call last):
+  File "/Users/jkitchin/Library/Enthought/Canopy_64bit/User/bin/hy", line 9, in <module>
+    load_entry_point('hy', 'console_scripts', 'hy')()
+  File "/Users/jkitchin/Dropbox/python/hy/hy/cmdline.py", line 341, in hy_main
+    sys.exit(cmdline_handler("hy", sys.argv))
+  File "/Users/jkitchin/Dropbox/python/hy/hy/cmdline.py", line 329, in cmdline_handler
+    return run_file(options.args[0])
+  File "/Users/jkitchin/Dropbox/python/hy/hy/cmdline.py", line 211, in run_file
+    pretty_error(import_file_to_module, "__main__", filename)
+  File "/Users/jkitchin/Dropbox/python/hy/hy/cmdline.py", line 184, in pretty_error
+    return func(*args, **kw)
+  File "/Users/jkitchin/Dropbox/python/hy/hy/importer.py", line 79, in import_file_to_module
+    eval(ast_compile(_ast, fpath, "exec"), mod.__dict__)
+  File "/Users/jkitchin/Dropbox/KitchinHUB/kitchingroup/hy-13457gUB", line 3, in <module>
+    (setv atoms (read "2016-04-01/example-db1.db@1"))
+  File "/Users/jkitchin/Dropbox/python/ase/ase/io/formats.py", line 291, in read
+    return next(_iread(filename, slice(index, None), format, **kwargs))
+  File "/Users/jkitchin/Dropbox/python/ase/ase/io/formats.py", line 328, in _iread
+    format = filetype(filename)
+  File "/Users/jkitchin/Dropbox/python/ase/ase/io/formats.py", line 463, in filetype
+    data = fd.read(2000)
+AttributeError: 'unicode' object has no attribute 'read'
+#+end_example
+
 
 
 Now we use a query.
