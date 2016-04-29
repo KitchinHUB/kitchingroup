@@ -216,7 +216,8 @@ print(5)
 #+END_SRC
 
 
-** <2016-04-01 Fri>
+** DONE <2016-04-01 Fri>
+   CLOSED: [2016-04-29 Fri 11:36]
 - Jake research (20 minutes)
 - Kenate research (20 minutes)
 - Alex - research (20 minutes)
@@ -382,40 +383,55 @@ view(atoms)
 #+RESULTS:
 : Traceback
 
-#+BEGIN_SRC hy
-(import [ase.visualize [view]])
-      (import [ase.io [read]])
-      (setv atoms (read "2016-04-01/example-db1.db@1"))
-(view atoms)
+#+BEGIN_SRC python
+from ase.visualize import view
+import ase.io as ai
+atoms = ai.read("2016-04-01/example-db1.db@1")
+view(atoms)
+#+END_SRC
+
+#+BEGIN_SRC python
+from hy.core.language import string
+from ase.visualize import view
+import ase.io as ai
+atoms = ai.read((str(u'2016-04-01/example-db1.db@1')))
+view(atoms)
 #+END_SRC
 
 #+RESULTS:
-#+begin_example
-Traceback (most recent call last):
-  File "/Users/jkitchin/Library/Enthought/Canopy_64bit/User/bin/hy", line 9, in <module>
-    load_entry_point('hy', 'console_scripts', 'hy')()
-  File "/Users/jkitchin/Dropbox/python/hy/hy/cmdline.py", line 341, in hy_main
-    sys.exit(cmdline_handler("hy", sys.argv))
-  File "/Users/jkitchin/Dropbox/python/hy/hy/cmdline.py", line 329, in cmdline_handler
-    return run_file(options.args[0])
-  File "/Users/jkitchin/Dropbox/python/hy/hy/cmdline.py", line 211, in run_file
-    pretty_error(import_file_to_module, "__main__", filename)
-  File "/Users/jkitchin/Dropbox/python/hy/hy/cmdline.py", line 184, in pretty_error
-    return func(*args, **kw)
-  File "/Users/jkitchin/Dropbox/python/hy/hy/importer.py", line 79, in import_file_to_module
-    eval(ast_compile(_ast, fpath, "exec"), mod.__dict__)
-  File "/Users/jkitchin/Dropbox/KitchinHUB/kitchingroup/hy-13457gUB", line 3, in <module>
-    (setv atoms (read "2016-04-01/example-db1.db@1"))
-  File "/Users/jkitchin/Dropbox/python/ase/ase/io/formats.py", line 291, in read
-    return next(_iread(filename, slice(index, None), format, **kwargs))
-  File "/Users/jkitchin/Dropbox/python/ase/ase/io/formats.py", line 328, in _iread
-    format = filetype(filename)
-  File "/Users/jkitchin/Dropbox/python/ase/ase/io/formats.py", line 463, in filetype
-    data = fd.read(2000)
-AttributeError: 'unicode' object has no attribute 'read'
-#+end_example
 
+#+BEGIN_SRC emacs-lisp
+default-directory
+#+END_SRC
 
+#+RESULTS:
+:
+
+#+BEGIN_SRC hy :results value
+(import [ase.visualize [view]])
+(import [ase.io :as ai])
+
+;; it is clunky we have to str this. but ase doesn't read unicode ;(
+(view (ai.read (str "2016-04-01/example-db1.db@1")))
+#+END_SRC
+
+#+RESULTS:
+: (ok)
+
+#+BEGIN_SRC hy
+(require hy.core.hylp)
+(import [hy.core.hylp [*]])
+
+(print (? "butlast"))
+#+END_SRC
+
+#+RESULTS:
+: Usage: (butlast coll)
+:
+: Returns coll except of last element.
+:
+: [[/Users/jkitchin/Dropbox/python/hy/hy/core/language.hy::46]]
+:
 
 Now we use a query.
 
@@ -455,19 +471,19 @@ view(atoms)
 
 #+RESULTS:
 
-** <2016-04-15 Fri>
+** <2016-04-29 Fri>
 - Elif - research (20 minutes)
 - Chen Wang - project proposal (10 minutes)
 - Akshay - project proposal (10 minutes)
 - hackathon - one cool solution, one problem to solve
 
-** <2016-04-29 Fri>
+** <2016-05-13 Fri>
 - Jake research (20 minutes)
 - Kenate research (20 minutes)
 - Alex - research (20 minutes)
 - hackathon - one cool solution, one problem to solve
 
-** <2016-05-13 Fri>
+** TBD
 - Elif - research (20 minutes)
 - Devon - project update (10 minutes)
 - Feiyang - project update (10 minutes)
