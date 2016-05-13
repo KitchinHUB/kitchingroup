@@ -471,7 +471,8 @@ view(atoms)
 
 #+RESULTS:
 
-** <2016-04-29 Fri>
+** DONE <2016-04-29 Fri>
+   CLOSED: [2016-05-13 Fri 15:00]
 - Elif - research (20 minutes)
 - Chen Wang - project proposal (10 minutes)
 - Akshay - project proposal (10 minutes)
