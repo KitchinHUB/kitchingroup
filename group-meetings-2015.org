@@ -3,308 +3,343 @@
 
 * Group meetings
 
-** DONE <2016-01-08 Fri>
-   CLOSED: [2016-01-08 Fri 18:22]
-- First rule of the Kitchin Research Group
-  - Be on time.
+** Summer 2016 meeting
+*** [2016-06-10 Fri] 3pm DH1102
+- Jake :: CuPd conundrum (15 min)
+- Sanjna :: AuPd literature review (10 min)
+- Elif :: Image analysis update (15 min)
+- Devon :: Research update (15 min)
 
-- Introductions
-  - Kenate (bulk Pd neural network)
+*** [2016-06-24 Fri] 3pm DH1102
+- Chen :: Research update (15 min)
+- Akshay :: Research update (15 min)
+- Tianyu :: Research update (15 min)
+- Feiyang :: Research update (15 min)
+- Kenate :: Research update (15 min)
 
-  - MS students - introduction
-    - Feiyang (ternary alloy phase behavior)
-    - Teng    (ternary alloy segregation)
-    - Tianyu  (neural adsorbates)
-    - Akshay (neural oxide)
-    - Chen   (neural oxide)
-    - Devon  (H2 separation on 2D materials)
+*** [2016-07-06 Wed] 3pm DH1102
+- Elif :: Qualifier Part I
+- Sanjna :: Research update
+- Teng :: Research update (15 min)
+- Devon :: Research update (15 min)
 
-- Graduating people
-  - Zhongnan
-  - Alex
+*** [2016-07-15 Fri] 3pm DH1102
+- Jake :: Research update (15 min)
+- Chen :: Research update (15 min)
+- Akshay :: Research update (15 min)
+- Tianyu :: Research update (15 min)
+- Feiyang :: Research update (15 min)
 
-- New PhD student
-  - Elif (microfluidic characterization of CO2 capture solvents)
+*** [2016-08-12 Fri] 3pm DH1102
+- Elif :: Qualifier practice (15 min)
+- Sanjna :: Research update (15 min)
+- Jean :: Research update (15 min)
+- Teng :: Research update (15 min)
+- Devon :: Research update (15 min)
 
-- Review of 2015
-  - 14 papers!
+** Spring 2016 meetings
+*** DONE <2016-01-08 Fri>
+    CLOSED: [2016-01-08 Fri 18:22]
+ - First rule of the Kitchin Research Group
+   - Be on time.
 
-- 2016 research overview
-  - Machine learning in alloy and oxide simulation
-    - Phase behavior
-    - Surface segregation
-    - Reactivity
-  - precipitating CO2 solvents
-  - jmax dominates the scientific writing world
-    - ox-manuscript + templates
-    - track-changes and merge
-    - collaborative writing
+ - Introductions
+   - Kenate (bulk Pd neural network)
 
-- Kenate presentation
+   - MS students - introduction
+     - Feiyang (ternary alloy phase behavior)
+     - Teng    (ternary alloy segregation)
+     - Tianyu  (neural adsorbates)
+     - Akshay (neural oxide)
+     - Chen   (neural oxide)
+     - Devon  (H2 separation on 2D materials)
 
-*** hackathon - jmax and org-ref
+ - Graduating people
+   - Zhongnan
+   - Alex
 
-See the jmax menu
+ - New PhD student
+   - Elif (microfluidic characterization of CO2 capture solvents)
 
-M-x ore  for help on org-elements
+ - Review of 2015
+   - 14 papers!
 
-| 5 | 6 |
-|---+---|
-| 3 | 4 |
-| 4 | 5 |
-| 4 | 5 |
-See the Org->org-ref->Help menu
+ - 2016 research overview
+   - Machine learning in alloy and oxide simulation
+     - Phase behavior
+     - Surface segregation
+     - Reactivity
+   - precipitating CO2 solvents
+   - jmax dominates the scientific writing world
+     - ox-manuscript + templates
+     - track-changes and merge
+     - collaborative writing
 
-Track-changes!!!{++ add new words++}
+ - Kenate presentation
 
-{--Some text that clearly should be deleted.--}
+**** hackathon - jmax and org-ref
 
-Put a comment ->   <- in here.
+ See the jmax menu
 
-Future hackathon topics:
-- integration with git/github
-- bibtexery
+ M-x ore  for help on org-elements
 
-bibliographystyle:unsrt
-bibliography:~/Dropbox/bibliography/references.bib
+ | 5 | 6 |
+ |---+---|
+ | 3 | 4 |
+ | 4 | 5 |
+ | 4 | 5 |
+ See the Org->org-ref->Help menu
 
+ Track-changes!!!{++ add new words++}
 
+ {--Some text that clearly should be deleted.--}
 
+ Put a comment ->   <- in here.
 
-** DONE <2016-01-22 Fri>
-   CLOSED: [2016-01-25 Mon 13:59]
-- Jake - tutorial (20 minutes)
-- Alex - research (20 minutes)
-- hackathon - one cool solution, one problem to solve
+ Future hackathon topics:
+ - integration with git/github
+ - bibtexery
 
- elisp:jmax-help
-
-Track changes - [[file:~/computational-materials/manuscript.org]]
-
-
-** DONE <2016-02-05 Fri>
-   CLOSED: [2016-02-15 Mon 10:48]
-- Devon - lit review 2D hydrogen transport (15 minutes)
-- Feiyang - lit review on modeling ternary alloy phase behavior  (15 minutes)
-- Tianyu - lit review of Oxygen on Pd surfaces  (15 minutes)
-- Teng Ma - lit review on alloy segregation  (15 minutes)
-- hackathon - one cool solution, one problem to solve
-
-Slide numbers, No animations, no timing, no themes, keep it so simple.
-Practice with pointer, and not reading
-
-$\exp{x}$  $$\exp{x}$$
-
-\(\exp{x}\)  \[\exp{x}\]
-
-@@latex:\ce{CO_{2}}@@  CO_{2}  \ce{H2SO4}  H_{2}SO_{4}  @@latex:H_2SO_4@@
-
-
-
-** DONE <2016-02-19 Fri>
-   CLOSED: [2016-02-19 Fri 20:31]
-- Elif - lit review on amine solvent CO2 capture  (15 minutes)
+ bibliographystyle:unsrt
+ bibliography:~/Dropbox/bibliography/references.bib
 
 
-Abolhasani angew chem int 2014, 53, 7992  cite:abolhasani-2014-microf-studies
-
-rochelle chemical engineering research and design 89 2011 1693 cite:chen-2011-aqueous
-
-cite:li-2014-solub-co2,mazari-2014-degrad-co2
-
-- Chen Wang - lit review on neural networks  (15 minutes)
-3:31
-
-- Akshay - lit review on oxide interfaces  (15 minutes)
-
-- hackathon - one cool solution, one problem to solve
-
-metal=Cu/feos=1.1/some-key=fav/isif=4/and=so-on
 
 
-More notes: 15 minutes = 10 slides.
-No outlines
+*** DONE <2016-01-22 Fri>
+    CLOSED: [2016-01-25 Mon 13:59]
+ - Jake - tutorial (20 minutes)
+ - Alex - research (20 minutes)
+ - hackathon - one cool solution, one problem to solve
 
-*** scheduled vs deadline
-    SCHEDULED: <2016-02-19 Fri> DEADLINE: <2016-03-04 Fri>
+  elisp:jmax-help
 
-C-c C-d
-C-c C-s
+ Track changes - [[file:~/computational-materials/manuscript.org]]
 
-*** Code blocks
 
-#+name: text
-#+BEGIN_SRC python :results output latex
+*** DONE <2016-02-05 Fri>
+    CLOSED: [2016-02-15 Mon 10:48]
+ - Devon - lit review 2D hydrogen transport (15 minutes)
+ - Feiyang - lit review on modeling ternary alloy phase behavior  (15 minutes)
+ - Tianyu - lit review of Oxygen on Pd surfaces  (15 minutes)
+ - Teng Ma - lit review on alloy segregation  (15 minutes)
+ - hackathon - one cool solution, one problem to solve
+
+ Slide numbers, No animations, no timing, no themes, keep it so simple.
+ Practice with pointer, and not reading
+
+ $\exp{x}$  $$\exp{x}$$
+
+ \(\exp{x}\)  \[\exp{x}\]
+
+ @@latex:\ce{CO_{2}}@@  CO_{2}  \ce{H2SO4}  H_{2}SO_{4}  @@latex:H_2SO_4@@
+
+
+
+*** DONE <2016-02-19 Fri>
+    CLOSED: [2016-02-19 Fri 20:31]
+ - Elif - lit review on amine solvent CO2 capture  (15 minutes)
+
+
+ Abolhasani angew chem int 2014, 53, 7992  cite:abolhasani-2014-microf-studies
+
+ rochelle chemical engineering research and design 89 2011 1693 cite:chen-2011-aqueous
+
+ cite:li-2014-solub-co2,mazari-2014-degrad-co2
+
+ - Chen Wang - lit review on neural networks  (15 minutes)
+ 3:31
+
+ - Akshay - lit review on oxide interfaces  (15 minutes)
+
+ - hackathon - one cool solution, one problem to solve
+
+ metal=Cu/feos=1.1/some-key=fav/isif=4/and=so-on
+
+
+ More notes: 15 minutes = 10 slides.
+ No outlines
+
+**** scheduled vs deadline
+     SCHEDULED: <2016-02-19 Fri> DEADLINE: <2016-03-04 Fri>
+
+ C-c C-d
+ C-c C-s
+
+**** Code blocks
+
+ #+name: text
+ #+BEGIN_SRC python :results output latex
 print('\\url{www.google.com}')
-#+END_SRC
+ #+END_SRC
 
-#+RESULTS:
-#+BEGIN_LaTeX
-\url{www.google.com}
-#+END_LaTeX
+ #+RESULTS:
+ #+BEGIN_LaTeX
+ \url{www.google.com}
+ #+END_LaTeX
 
-#+BEGIN_SRC python :var t=text
+ #+BEGIN_SRC python :var t=text
 print(t)
-#+END_SRC
+ #+END_SRC
 
-#+RESULTS:
-: \url{www.google.com}
-:
+ #+RESULTS:
+ : \url{www.google.com}
+ :
 
 
 
-#+name: numbers
-#+BEGIN_SRC python :results value
+ #+name: numbers
+ #+BEGIN_SRC python :results value
 return [['a', 'b', 'c'], None, [1, 3, 4], [5, 6, 7]]
-#+END_SRC
+ #+END_SRC
 
-#+RESULTS: numbers
-| a | b | c |
-|---+---+---|
-| 1 | 3 | 4 |
-| 5 | 6 | 7 |
+ #+RESULTS: numbers
+ | a | b | c |
+ |---+---+---|
+ | 1 | 3 | 4 |
+ | 5 | 6 | 7 |
 
 
-#+BEGIN_SRC python :var n=numbers
+ #+BEGIN_SRC python :var n=numbers
 import numpy as np
 n = np.array(n)
 
 print(n.max())
-#+END_SRC
+ #+END_SRC
 
-#+RESULTS:
-: 7
+ #+RESULTS:
+ : 7
 
-#+BEGIN_SRC python :session
+ #+BEGIN_SRC python :session
 a = 5
-#+END_SRC
+ #+END_SRC
 
-#+RESULTS:
-: Python 3.5.1 |Anaconda 2.5.0 (x86_64)| (default, Dec  7 2015, 11:24:55)
-: [GCC 4.2.1 (Apple Inc. build 5577)] on darwin
-: Type "help", "copyright", "credits" or "license" for more information.
-: python.el: native completion setup loaded
+ #+RESULTS:
+ : Python 3.5.1 |Anaconda 2.5.0 (x86_64)| (default, Dec  7 2015, 11:24:55)
+ : [GCC 4.2.1 (Apple Inc. build 5577)] on darwin
+ : Type "help", "copyright", "credits" or "license" for more information.
+ : python.el: native completion setup loaded
 
-#+BEGIN_SRC python :session
+ #+BEGIN_SRC python :session
 print(5 * a)
-#+END_SRC
+ #+END_SRC
 
-#+RESULTS:
-: 25
+ #+RESULTS:
+ : 25
 
-** DONE <2016-03-04 Fri> group meeting
-   CLOSED: [2016-03-18 Fri 14:51]
-- Jake research (20 minutes)
-- Kenate research (20 minutes)
-- Alex - research (20 minutes)
-- hackathon - one cool solution, one problem to solve
+*** DONE <2016-03-04 Fri> group meeting
+    CLOSED: [2016-03-18 Fri 14:51]
+ - Jake research (20 minutes)
+ - Kenate research (20 minutes)
+ - Alex - research (20 minutes)
+ - hackathon - one cool solution, one problem to solve
 
-** DONE <2016-03-18 Fri>
-   CLOSED: [2016-03-29 Tue 10:31]
-- Elif - research (20 minutes)
-- Devon - project proposal (10 minutes)
-- Feiyang - project proposal (10 minutes)
-- Tianyu - project proposal (10 minutes)
-- Teng Ma - project proposal (10 minutes)
-- hackathon - one cool solution, one problem to solve
+*** DONE <2016-03-18 Fri>
+    CLOSED: [2016-03-29 Tue 10:31]
+ - Elif - research (20 minutes)
+ - Devon - project proposal (10 minutes)
+ - Feiyang - project proposal (10 minutes)
+ - Tianyu - project proposal (10 minutes)
+ - Teng Ma - project proposal (10 minutes)
+ - hackathon - one cool solution, one problem to solve
 
 
-#+BEGIN_SRC python
+ #+BEGIN_SRC python
 
 print(5)
 
-#+END_SRC
+ #+END_SRC
 
 
-** DONE <2016-04-01 Fri>
-   CLOSED: [2016-04-29 Fri 11:36]
-- Jake research (20 minutes)
-- Kenate research (20 minutes)
-- Alex - research (20 minutes)
-- hackathon - one cool solution, one problem to solve
+*** DONE <2016-04-01 Fri>
+    CLOSED: [2016-04-29 Fri 11:36]
+ - Jake research (20 minutes)
+ - Kenate research (20 minutes)
+ - Alex - research (20 minutes)
+ - hackathon - one cool solution, one problem to solve
 
-Jake has this ase-database. He would like to interact with it via Emacs
+ Jake has this ase-database. He would like to interact with it via Emacs
 
-#+BEGIN_SRC sh
+ #+BEGIN_SRC sh
 ase-db --limit 15 2016-04-01/example-db1.db id=70
-#+END_SRC
+ #+END_SRC
 
-#+RESULTS:
-: id|age|user |formula|pbc|  volume|charge|    mass
-: 70|23d|jacob|O4Pd36 |TTT|1259.067| 0.000|3895.118
-: Rows: 1
+ #+RESULTS:
+ : id|age|user |formula|pbc|  volume|charge|    mass
+ : 70|23d|jacob|O4Pd36 |TTT|1259.067| 0.000|3895.118
+ : Rows: 1
 
-We can turn that into a table, or list of entries like this:
+ We can turn that into a table, or list of entries like this:
 
-#+BEGIN_SRC emacs-lisp
+ #+BEGIN_SRC emacs-lisp
 (mapcar (lambda (s) (split-string s "|"))
 	(split-string
 	 (shell-command-to-string
 	  "ase-db 2016-04-01/example-db1.db") "\n"))
-#+END_SRC
+ #+END_SRC
 
-#+RESULTS:
-|                           id | age | user  | formula | pbc |   volume | charge |     mass |
-|                            1 | 23d | jacob | O4Pd36  | TTT | 1259.067 |  0.000 | 3895.118 |
-|                            2 | 23d | jacob | Pd36    | TTT | 1042.634 |  0.000 | 3831.120 |
-|                            3 | 23d | jacob | Pd36    | TTT | 1136.308 |  0.000 | 3831.120 |
-|                            4 | 23d | jacob | Pd36    | TTT | 1414.688 |  0.000 | 3831.120 |
-|                            5 | 23d | jacob | Pd36    | TTT | 1441.506 |  0.000 | 3831.120 |
-|                            6 | 23d | jacob | Pd36    | TTT | 1468.576 |  0.000 | 3831.120 |
-|                            7 | 23d | jacob | Pd36    | TTT | 1495.898 |  0.000 | 3831.120 |
-|                            8 | 23d | jacob | Pd36    | TTT | 1523.472 |  0.000 | 3831.120 |
-|                            9 | 23d | jacob | Pd36    | TTT | 1551.297 |  0.000 | 3831.120 |
-|                           10 | 23d | jacob | Pd36    | TTT | 1579.374 |  0.000 | 3831.120 |
-|                           11 | 23d | jacob | Pd36    | TTT | 1607.703 |  0.000 | 3831.120 |
-|                           12 | 23d | jacob | Pd36    | TTT | 1636.284 |  0.000 | 3831.120 |
-|                           13 | 23d | jacob | Pd36    | TTT | 1665.117 |  0.000 | 3831.120 |
-|                           14 | 23d | jacob | Pd36    | TTT | 1694.201 |  0.000 | 3831.120 |
-|                           15 | 23d | jacob | Pd36    | TTT | 1723.537 |  0.000 | 3831.120 |
-|                           16 | 23d | jacob | Pd36    | TTT | 1753.125 |  0.000 | 3831.120 |
-|                           17 | 23d | jacob | Pd36    | TTT | 1782.965 |  0.000 | 3831.120 |
-|                           18 | 23d | jacob | Pd36    | TTT | 1813.057 |  0.000 | 3831.120 |
-|                           19 | 23d | jacob | O5Pd36  | TTT | 1259.067 |  0.000 | 3911.117 |
-|                           20 | 23d | jacob | O5Pd36  | TTT | 1259.067 |  0.000 | 3911.117 |
-| Rows: 110 (showing first 20) |     |       |         |     |          |        |          |
-|                              |     |       |         |     |          |        |          |
+ #+RESULTS:
+ |                           id | age | user  | formula | pbc |   volume | charge |     mass |
+ |                            1 | 23d | jacob | O4Pd36  | TTT | 1259.067 |  0.000 | 3895.118 |
+ |                            2 | 23d | jacob | Pd36    | TTT | 1042.634 |  0.000 | 3831.120 |
+ |                            3 | 23d | jacob | Pd36    | TTT | 1136.308 |  0.000 | 3831.120 |
+ |                            4 | 23d | jacob | Pd36    | TTT | 1414.688 |  0.000 | 3831.120 |
+ |                            5 | 23d | jacob | Pd36    | TTT | 1441.506 |  0.000 | 3831.120 |
+ |                            6 | 23d | jacob | Pd36    | TTT | 1468.576 |  0.000 | 3831.120 |
+ |                            7 | 23d | jacob | Pd36    | TTT | 1495.898 |  0.000 | 3831.120 |
+ |                            8 | 23d | jacob | Pd36    | TTT | 1523.472 |  0.000 | 3831.120 |
+ |                            9 | 23d | jacob | Pd36    | TTT | 1551.297 |  0.000 | 3831.120 |
+ |                           10 | 23d | jacob | Pd36    | TTT | 1579.374 |  0.000 | 3831.120 |
+ |                           11 | 23d | jacob | Pd36    | TTT | 1607.703 |  0.000 | 3831.120 |
+ |                           12 | 23d | jacob | Pd36    | TTT | 1636.284 |  0.000 | 3831.120 |
+ |                           13 | 23d | jacob | Pd36    | TTT | 1665.117 |  0.000 | 3831.120 |
+ |                           14 | 23d | jacob | Pd36    | TTT | 1694.201 |  0.000 | 3831.120 |
+ |                           15 | 23d | jacob | Pd36    | TTT | 1723.537 |  0.000 | 3831.120 |
+ |                           16 | 23d | jacob | Pd36    | TTT | 1753.125 |  0.000 | 3831.120 |
+ |                           17 | 23d | jacob | Pd36    | TTT | 1782.965 |  0.000 | 3831.120 |
+ |                           18 | 23d | jacob | Pd36    | TTT | 1813.057 |  0.000 | 3831.120 |
+ |                           19 | 23d | jacob | O5Pd36  | TTT | 1259.067 |  0.000 | 3911.117 |
+ |                           20 | 23d | jacob | O5Pd36  | TTT | 1259.067 |  0.000 | 3911.117 |
+ | Rows: 110 (showing first 20) |     |       |         |     |          |        |          |
+ |                              |     |       |         |     |          |        |          |
 
-A loopy way to do that.
-#+BEGIN_SRC emacs-lisp
+ A loopy way to do that.
+ #+BEGIN_SRC emacs-lisp
 (loop for s in (split-string
 		(shell-command-to-string
 		 "ase-db 2016-04-01/example-db1.db") "\n")
       collect (split-string s "|"))
-#+END_SRC
+ #+END_SRC
 
-#+RESULTS:
-|                           id | age | user  | formula | pbc |   volume | charge |     mass |
-|                            1 | 23d | jacob | O4Pd36  | TTT | 1259.067 |  0.000 | 3895.118 |
-|                            2 | 23d | jacob | Pd36    | TTT | 1042.634 |  0.000 | 3831.120 |
-|                            3 | 23d | jacob | Pd36    | TTT | 1136.308 |  0.000 | 3831.120 |
-|                            4 | 23d | jacob | Pd36    | TTT | 1414.688 |  0.000 | 3831.120 |
-|                            5 | 23d | jacob | Pd36    | TTT | 1441.506 |  0.000 | 3831.120 |
-|                            6 | 23d | jacob | Pd36    | TTT | 1468.576 |  0.000 | 3831.120 |
-|                            7 | 23d | jacob | Pd36    | TTT | 1495.898 |  0.000 | 3831.120 |
-|                            8 | 23d | jacob | Pd36    | TTT | 1523.472 |  0.000 | 3831.120 |
-|                            9 | 23d | jacob | Pd36    | TTT | 1551.297 |  0.000 | 3831.120 |
-|                           10 | 23d | jacob | Pd36    | TTT | 1579.374 |  0.000 | 3831.120 |
-|                           11 | 23d | jacob | Pd36    | TTT | 1607.703 |  0.000 | 3831.120 |
-|                           12 | 23d | jacob | Pd36    | TTT | 1636.284 |  0.000 | 3831.120 |
-|                           13 | 23d | jacob | Pd36    | TTT | 1665.117 |  0.000 | 3831.120 |
-|                           14 | 23d | jacob | Pd36    | TTT | 1694.201 |  0.000 | 3831.120 |
-|                           15 | 23d | jacob | Pd36    | TTT | 1723.537 |  0.000 | 3831.120 |
-|                           16 | 23d | jacob | Pd36    | TTT | 1753.125 |  0.000 | 3831.120 |
-|                           17 | 23d | jacob | Pd36    | TTT | 1782.965 |  0.000 | 3831.120 |
-|                           18 | 23d | jacob | Pd36    | TTT | 1813.057 |  0.000 | 3831.120 |
-|                           19 | 23d | jacob | O5Pd36  | TTT | 1259.067 |  0.000 | 3911.117 |
-|                           20 | 23d | jacob | O5Pd36  | TTT | 1259.067 |  0.000 | 3911.117 |
-| Rows: 110 (showing first 20) |     |       |         |     |          |        |          |
-|                              |     |       |         |     |          |        |          |
+ #+RESULTS:
+ |                           id | age | user  | formula | pbc |   volume | charge |     mass |
+ |                            1 | 23d | jacob | O4Pd36  | TTT | 1259.067 |  0.000 | 3895.118 |
+ |                            2 | 23d | jacob | Pd36    | TTT | 1042.634 |  0.000 | 3831.120 |
+ |                            3 | 23d | jacob | Pd36    | TTT | 1136.308 |  0.000 | 3831.120 |
+ |                            4 | 23d | jacob | Pd36    | TTT | 1414.688 |  0.000 | 3831.120 |
+ |                            5 | 23d | jacob | Pd36    | TTT | 1441.506 |  0.000 | 3831.120 |
+ |                            6 | 23d | jacob | Pd36    | TTT | 1468.576 |  0.000 | 3831.120 |
+ |                            7 | 23d | jacob | Pd36    | TTT | 1495.898 |  0.000 | 3831.120 |
+ |                            8 | 23d | jacob | Pd36    | TTT | 1523.472 |  0.000 | 3831.120 |
+ |                            9 | 23d | jacob | Pd36    | TTT | 1551.297 |  0.000 | 3831.120 |
+ |                           10 | 23d | jacob | Pd36    | TTT | 1579.374 |  0.000 | 3831.120 |
+ |                           11 | 23d | jacob | Pd36    | TTT | 1607.703 |  0.000 | 3831.120 |
+ |                           12 | 23d | jacob | Pd36    | TTT | 1636.284 |  0.000 | 3831.120 |
+ |                           13 | 23d | jacob | Pd36    | TTT | 1665.117 |  0.000 | 3831.120 |
+ |                           14 | 23d | jacob | Pd36    | TTT | 1694.201 |  0.000 | 3831.120 |
+ |                           15 | 23d | jacob | Pd36    | TTT | 1723.537 |  0.000 | 3831.120 |
+ |                           16 | 23d | jacob | Pd36    | TTT | 1753.125 |  0.000 | 3831.120 |
+ |                           17 | 23d | jacob | Pd36    | TTT | 1782.965 |  0.000 | 3831.120 |
+ |                           18 | 23d | jacob | Pd36    | TTT | 1813.057 |  0.000 | 3831.120 |
+ |                           19 | 23d | jacob | O5Pd36  | TTT | 1259.067 |  0.000 | 3911.117 |
+ |                           20 | 23d | jacob | O5Pd36  | TTT | 1259.067 |  0.000 | 3911.117 |
+ | Rows: 110 (showing first 20) |     |       |         |     |          |        |          |
+ |                              |     |       |         |     |          |        |          |
 
-Let's turn this into a function with selection. No db query here.
+ Let's turn this into a function with selection. No db query here.
 
 
-#+BEGIN_SRC emacs-lisp
+ #+BEGIN_SRC emacs-lisp
 (defun ase-db-info (s) (message-box "%S" s)
        (with-help-window (help-buffer)
 	 (princ
@@ -332,21 +367,21 @@ view(atoms)
 	  :action '(1
 		    ("v" ase-db-view "View")
 		    ("i" ase-db-info "Info")))
-#+END_SRC
+ #+END_SRC
 
-#+RESULTS:
-:  62|23d|jacob|O4Pd36 |TTT|1259.067| 0.000|3895.118
+ #+RESULTS:
+ :  62|23d|jacob|O4Pd36 |TTT|1259.067| 0.000|3895.118
 
 
-#+BEGIN_EXAMPLE
+ #+BEGIN_EXAMPLE
 (let ((py (format "from ase.visualize import view
 from ase.io import read
 atoms = read(\"%s@%s\")
 view(atoms)
 " "2016-04-01/example-db1.db" (s-trim (car (split-string s "|")))))
-#+END_EXAMPLE
+ #+END_EXAMPLE
 
-#+BEGIN_SRC emacs-lisp
+ #+BEGIN_SRC emacs-lisp
 (let ((py (format "from ase.visualize import view
 from ase.io import read
 atoms = read(\"%s@%s\")
@@ -359,11 +394,11 @@ view(atoms)
     (insert py))
   (call-process "python" tf)
   (delete-file tf))
-#+END_SRC
+ #+END_SRC
 
-#+RESULTS:
+ #+RESULTS:
 
-#+BEGIN_SRC emacs-lisp
+ #+BEGIN_SRC emacs-lisp
 (defmacro hy (body)
   `(let* ((temporary-file-directory ".")
 	  (tempfile (make-temp-file "hy-")))
@@ -378,64 +413,64 @@ view(atoms)
       (import ase.io)
       (setv atoms (ase.io.read "2016-04-01/example-db1.db@1"))
       (ase.visualize.view atoms)))
-#+END_SRC
+ #+END_SRC
 
-#+RESULTS:
-: Traceback
+ #+RESULTS:
+ : Traceback
 
-#+BEGIN_SRC python
+ #+BEGIN_SRC python
 from ase.visualize import view
 import ase.io as ai
 atoms = ai.read("2016-04-01/example-db1.db@1")
 view(atoms)
-#+END_SRC
+ #+END_SRC
 
-#+BEGIN_SRC python
+ #+BEGIN_SRC python
 from hy.core.language import string
 from ase.visualize import view
 import ase.io as ai
 atoms = ai.read((str(u'2016-04-01/example-db1.db@1')))
 view(atoms)
-#+END_SRC
+ #+END_SRC
 
-#+RESULTS:
+ #+RESULTS:
 
-#+BEGIN_SRC emacs-lisp
+ #+BEGIN_SRC emacs-lisp
 default-directory
-#+END_SRC
+ #+END_SRC
 
-#+RESULTS:
-:
+ #+RESULTS:
+ :
 
-#+BEGIN_SRC hy :results value
+ #+BEGIN_SRC hy :results value
 (import [ase.visualize [view]])
 (import [ase.io :as ai])
 
 ;; it is clunky we have to str this. but ase doesn't read unicode ;(
 (view (ai.read (str "2016-04-01/example-db1.db@1")))
-#+END_SRC
+ #+END_SRC
 
-#+RESULTS:
-: (ok)
+ #+RESULTS:
+ : (ok)
 
-#+BEGIN_SRC hy
+ #+BEGIN_SRC hy
 (require hy.core.hylp)
 (import [hy.core.hylp [*]])
 
 (print (? "butlast"))
-#+END_SRC
+ #+END_SRC
 
-#+RESULTS:
-: Usage: (butlast coll)
-:
-: Returns coll except of last element.
-:
-: [[/Users/jkitchin/Dropbox/python/hy/hy/core/language.hy::46]]
-:
+ #+RESULTS:
+ : Usage: (butlast coll)
+ :
+ : Returns coll except of last element.
+ :
+ : [[/Users/jkitchin/Dropbox/python/hy/hy/core/language.hy::46]]
+ :
 
-Now we use a query.
+ Now we use a query.
 
-#+BEGIN_SRC emacs-lisp
+ #+BEGIN_SRC emacs-lisp
 (defvar db "/Users/jkitchin/Dropbox/KitchinHUB/kitchingroup/2016-04-01/example-db1.db"
   "The database.")
 
@@ -467,26 +502,26 @@ view(atoms)
 				(call-process "python" tf)
 				(delete-file tf))))))
       :buffer "*helm async source*")
-#+END_SRC
+ #+END_SRC
 
-#+RESULTS:
+ #+RESULTS:
 
-** DONE <2016-04-29 Fri>
-   CLOSED: [2016-05-13 Fri 15:00]
-- Elif - research (20 minutes)
-- Chen Wang - project proposal (10 minutes)
-- Akshay - project proposal (10 minutes)
-- hackathon - one cool solution, one problem to solve
+*** DONE <2016-04-29 Fri>
+    CLOSED: [2016-05-13 Fri 15:00]
+ - Elif - research (20 minutes)
+ - Chen Wang - project proposal (10 minutes)
+ - Akshay - project proposal (10 minutes)
+ - hackathon - one cool solution, one problem to solve
 
-** <2016-05-13 Fri>
-- Jake research (20 minutes)
-- Kenate research (20 minutes)
-- Alex - research (20 minutes)
-- hackathon - one cool solution, one problem to solve
+*** <2016-05-13 Fri>
+ - Jake research (20 minutes)
+ - Kenate research (20 minutes)
+ - Alex - research (20 minutes)
+ - hackathon - one cool solution, one problem to solve
 
-** TBD
-- Elif - research (20 minutes)
-- Devon - project update (10 minutes)
-- Feiyang - project update (10 minutes)
-- Tianyu - project update (10 minutes)
-- Teng Ma - project update (10 minutes)
+*** TBD
+ - Elif - research (20 minutes)
+ - Devon - project update (10 minutes)
+ - Feiyang - project update (10 minutes)
+ - Tianyu - project update (10 minutes)
+ - Teng Ma - project update (10 minutes)
