@@ -1,13 +1,14 @@
 #+TODO: TODO INPROGRESS | CANCELLED DONE
 
-
 * Group meetings
 
 ** Summer 2016 meeting
-*** [2016-06-10 Fri] 3pm DH1102
+*** TODO [2016-06-10 Fri] 3pm DH1102
+- Elif :: Image analysis update (15 min)
+
+
 - Jake :: CuPd conundrum (15 min)
 - Sanjna :: AuPd literature review (10 min)
-- Elif :: Image analysis update (15 min)
 - Devon :: Research update (15 min)
 
 *** [2016-06-24 Fri] 3pm DH1102
@@ -15,7 +16,7 @@
 - Akshay :: Research update (15 min)
 - Tianyu :: Research update (15 min)
 - Feiyang :: Research update (15 min)
-- Kenate :: Research update (15 min)
+
 
 *** [2016-07-06 Wed] 3pm DH1102
 - Elif :: Qualifier Part I
