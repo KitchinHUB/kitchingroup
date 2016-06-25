@@ -3,7 +3,7 @@
 * Group meetings
 
 ** Summer 2016 meeting
-*** TODO [2016-06-10 Fri] 3pm DH1102
+*** DONE [2016-06-10 Fri] 3pm DH1102
 - Elif :: Image analysis update (15 min)
 
 
@@ -11,7 +11,7 @@
 - Sanjna :: AuPd literature review (10 min)
 - Devon :: Research update (15 min)
 
-*** [2016-06-24 Fri] 3pm DH1102
+*** DONE [2016-06-24 Fri] 3pm DH1102
 - Chen :: Research update (15 min)
 - Akshay :: Research update (15 min)
 - Tianyu :: Research update (15 min)
