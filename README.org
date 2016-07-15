@@ -4,6 +4,47 @@ Welcome to the Kitchin Research group.
 
 - [[./group-meetings-2015.org][Group meetings]]
 
+* Your KitchinHUB repo
+You should have a repo we will share at https://github.com/KitchinHUB/{your-andrewid}. This repo is predominantly for us to communicate files between you and me.
+
+** Setup an ssh key for yourself and put it on github
+
+Look in your ~/.ssh folder. If you see a file called id_rsa.pub copy the contents of that file to the clipboard. Go to https://github.com/settings/keys and click "New SSH key", give it a name, and paste the key in the field.
+
+If you don't have an id_rsa.pub, Then run these commands:
+
+#+BEGIN_SRC sh
+cd ~/.ssh
+ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+#+END_SRC
+
+Then do the instructions above to add it to github. This will make it easy to push and pull the repo.
+
+** Clone your repo
+Change to some directory where you want your repo to be and run this command:
+#+BEGIN_SRC sh
+git clone git@github.com/KitchinHUB/{your-andrewid}
+#+END_SRC
+
+I recommend you keep the number of places you clone the repo to a minimum because they need be synchronized.
+
+** Using the repo
+It is probably a good idea to "pull" your repo each time you start working on it to make sure you have the most up to date version.
+
+This command:
+
+M-x jmax-todo-agenda
+
+will list all the todo items in the org files in your repo.
+
+*** Progress reports
+The repo will have a folder in it called "reports". When you submit a report, make a folder inside this directory with the name "{year}-{month}-{day}" with zero-padded month and day. E.g. a report for July 6, 2016 should be in a folder titled 2016-07-06. Inside that folder, create a README.org file and put your report in it. Make sure to include any images/files I might need to see in the folder. When you are done, add new files, commit changes and push to Github. Send me a note that it is ready for review. I will put feedback in the report for you, and I will let you know if we should meet to discuss it.
+
+The feedback should show up as "comment", "typo", "insert/delete" links. You should be able to run M-x em-editmarks to get a browseable list of these. You can click on the links to 
+
 * Resources
 - [[./org-mode.org][Learn org-mode]]
+
 - The Kitchin Group blog: http://kitchingroup.cheme.cmu.edu
+
+- Check out this magit-tutorial: https://github.com/jkitchin/magit-tutorial

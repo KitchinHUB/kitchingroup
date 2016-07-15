@@ -18,7 +18,7 @@
 - Feiyang :: Research update (15 min)
 
 
-*** [2016-07-06 Wed] 3pm DH1102
+*** DONE [2016-07-06 Wed] 3pm DH1102
 - Elif :: Qualifier Part I
 - Sanjna :: Research update
 - Teng :: Research update (15 min)
