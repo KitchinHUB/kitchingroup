@@ -1,4 +1,4 @@
-#+title:Research Report 
+#+title:Group Meeting
 #+author:Geng Feiyang
 #+DUEDATE:<2016-07-13 Wed>
 
@@ -7,7 +7,7 @@
 *** brief introduction of stiffness vs bond length method
 Stiffness vs bond length method is basic way for us to calculate vibrational energy. All the structures are relaxed at first and perturbation is generated at different directions. After calculation of force constant matrices, a stretching-bending force constant model is established and the relationship between stiffness and bond length is applied to all other structures in order to calculate their vibrational quantities. The figure ref:fig-culi shows a good example of the way to determine the force constant. cite:Wale-2004-first. Linear or non-linear fitting is performed to determine the relationship between stiffness and bond length of CuLi alloy. 
 
-[[./CuLi.png]]
+[[./images/CuLi.png]]
 #+caption: Determination of length-dependant force constant in CuLi alloy. label:fig-culi
 
 *** convergence test
@@ -19,44 +19,44 @@ we perform convergence test on one of the B2 super-cell structure with displacem
 
 The Figure ref:fig-converge-encut shows the result of convergence test with various energy cutoff. Encut number increases from 300 to 550 and k points density is fixed to 4X4X4. Energies obtained are not corrected by converged energy. In the force convergence test, we assume the result with energy cutoff of 550 eV is most accurate among other calculations. Therefore, the force of various encut is corrected by the force of energy cutoff of 550 along same direction.Eventually the averaged disparity of forces among all directions is reported.  The Figure ref:fig-converge-encut (a) shows encut should be larger than 350 to converge to 1 meV/atom. Comparably, Figure ref:fig-converge-encut (b) shows the convergence of force within 1 $meV/A^2$ requires minimum energy cutoff of 300 eV. 
 
-[[./encut-convergence.png]]
+[[./images/encut-convergence.png]]
 #+caption: (a) encut vs energy convergence. (b) encut vs force convergence. label:fig-converge-encut
 
 
 As for k points convergence, the energy cutoff for each k-points is fixed at 400 eV and k-points changes from 3X3X3 to 6X6X6. The maximum force disparity is reported in the same way as the test of encut convergence. 
 From Figure ref:fig-converge-kpts (a), it is clear that k points larger than 4X4X4 is sufficient for energy convergence of $1meV/atom$  and force convergence of $1meV/Ang^2$. 
-[[./kpoints-convergence.png]]
+[[./images/kpoints-convergence.png]]
 #+caption: (a) k-points vs energy convergence. (b) k-points vs force convergence. label:fig-converge-kpts
 
 So, what parameter to choose for further calculation? We want to balance both computational cost and accuracy. A calculation with encut of 500 and kpoints density of 6X6X6 may cost more than 2 days to converge. Not to mention a more accurate calculation may requires larger super-cell. Thus, high energy cutoff and k-points density are both very costly. Eventually we decides to use encut = 350 and kpoints density = 5X5X5. This setting may result in a energy convergence of around 2 $meV/atom$ and a force convergence within 0.001 $eV/A^2$.  
 
 *** try phase diagram
 After convergence test, we choose energy cutoff of 350 eV and k points density of 5X5X5 as parameter to continue static calculation. The displacement of perturbed atom is chosen to be 0.15 Angstrom for bcc and 0.2 Angstrom for fcc. Super-cell with perturbation is constructed based on 7 ground states of fcc and 5 ground states of bcc structure. No other structures are involved. Figure ref:fig-cucua, ref:fig-cupda, ref:fig-pdpda is the result of bcc. All the plot shows good fit to the stiffness.  
-[[./Cu-Cu-accurage.png]]
+[[./images/Cu-Cu-accurage.png]]
 #+caption:Stretching (left) and bending (right) terms of nearest neighbor spring tensor as a function of bond length. Each point corresponds to Cu-Cu bond in one of a set of bcc structure.label:fig-cucua
 
-[[./Cu-Pd-accurage.png]]
+[[./images/Cu-Pd-accurage.png]]
 #+caption:Stretching (left) and bending (right) terms of nearest neighbor spring tensor as a function of bond length. Each point corresponds to Cu-Pd bond in one of a set of bcc structure. label:fig-cupda
 
-[[./Pd-Pd-accurage.png]]
+[[./images/Pd-Pd-accurage.png]]
 #+caption:Stretching (left) and bending (right) terms of nearest neighbor spring tensor as a function of bond length. Each point corresponds to Pd-Pd bond in one of a set of bcc structure. label:fig-pdpda
 
 
-[[./fcc01.png]]
+[[./images/fcc01.png]]
 #+caption:Stretching(s) and bending (b) terms of the nearest neighbor spring tensor as a function of bond length. Each point corresponds to one type of bond in one of a set of fcc structures(A1,L12, fcc Cu, fcc Pd, each taken at two different volumes) label:fig-linear
 
 Figure ref:fig-linear is the fitting result of fcc. The stiffness decreases as bond length increases and eventually a good linear relationship is fitted in the plot. Cluster expansion is then performed on all structures. Although 17 configurations (including Pd bcc)are unstable, we still force the program to generate vibrational energy for all of them, regardless of their negative frequency. The CVS is eventually 12meV/atom. When vibrational free energy is obtained, we add the vibrational free energy to configurational enthalpy at 0K in order to show the contribution of vibrational entropy at various temperature. 
 
 
-[[./vibbcc.png]]
+[[./images/vibbcc.png]]
 #+caption:Left plot shows the vibrational free energy of B2 structures. Right plot is the convex hull of enthalpy of bcc with vibrational free energy. (referenced energy is Cu bcc and Pd bcc)label:fig-bccvib
-[[./vibfcc.png]]
+[[./images/vibfcc.png]]
 #+caption::Left plot shows the vibrational free energy of fcc structures. Right plot is the convex hull of enthalpy of fcc with vibrational free energy. (referenced energy is fcc Cu and fcc Pd) label:fig-fccvib
 
-[[./vib2.png]]
+[[./images/vib2.png]]
 #+caption:Convex hull of enthalpy for both fcc and bcc(configurational enthalpy at 0K + vibrational enthalpy at various T, referenced energy is Cu fcc and Pd fcc). label:fig-vibhull
 Figure ref:fig-bccvib and ref:fig-fccvib are the resulting profile of bcc and fcc. The total enthalpy profile with referenced energy of fcc(configurational enthalpy at 0 K + vibrational enthalpy at various temperatures) shows a stable trend for B2 phase, figure ref:fig-vibhull. To verify this trend for B2 phase, a phase diagram is done based on the vibrational free energy.
-[[./stiffnessmethod.png]]
+[[./images/stiffnessmethod.png]]
 #+caption:Phase diagram of CuPd involving vibrational free energy. label:fig-stiffness
 However the result is very different from what we expect,figure ref:fig-stiffness. The phase transition appears at very low temperature and no expansion of B2 is observed. Something must goes wrong. One possibility is that the fitting does not converge and structures we consider are not enough. Another possibility is that displacement of atom we chose is wrong and the stiffness is therefore inaccurate.  
 
@@ -64,19 +64,19 @@ However the result is very different from what we expect,figure ref:fig-stiffnes
 
 One possibility for the failure of fitting process is that the fitting does not converge because the structures we consider is not enough. Thus more non-ground-state structures are considered to reinforce the fitting accuracy. 
 
-[[./Cu-Cu-add.png]]
+[[./images/Cu-Cu-add.png]]
 #+caption:Stretching (left) and bending (right) terms of nearest neighbor spring tensor as a function of bond length. Each point corresponds to Cu-Cu bond in one of a set of bcc structure. label:fig-cucuadd
 
 
-[[./Cu-Pd-add.png]]
+[[./images/Cu-Pd-add.png]]
 #+caption:Stretching (left) and bending (right) terms of nearest neighbor spring tensor as a function of bond length. Each point corresponds to Cu-Pd bond in one of a set of bcc structure. label:fig-cupdadd
 
 
-[[./Pd-Pd-add.png]]
+[[./images/Pd-Pd-add.png]]
 #+caption:Stretching (left) and bending (right) terms of nearest neighbor spring tensor as a function of bond length. Each point corresponds to Pd-Pd bond in one of a set of bcc structure. label:fig-pdpdadd
 However, as seen in Figure ref:fig-cucuadd, ref:fig-cupdadd and ref:fig-pdpdadd, the addition of non-ground state configuration causes wide distribution of data which is not a good option for fitting process.I tried with different order of polynomial. However the result is still not as I expected. 
 
-[[./addnongs.png]]
+[[./images/addnongs.png]]
 #+caption: Enthalpy profile of both fcc and bcc when non-groundstate configurations are added to fit. (referenced energy is Cu fcc and Pd fcc) label:fig-addnongs
 The resulting profile of vibrational contribution to the total enthalpy are shown in Figure ref:fig-addnongs. From this plot, the enthalpy of B2 phase eventually increases as temperature increases. It may be wrong,as our fitting looks terrible. 
 
@@ -85,18 +85,18 @@ But I do not think those structures should not be considered, the reason why thi
 *** effect of displacement of atom in stiffness vs bond length method
 In order to find out a suitable displacement of perturbed atom, we fit the relationship between stiffness and bond length based on the same ground state configurations. The result is shown in figure ref:fig-cucu, ref:fig-cupd, and ref:fig-pdpd. It can be seen that different displacement has different stiffness at equal bond length and the result does not converge as displacement decreases, especially for the long-range bond.
 
-[[./Cu-Cu-testdr.png]]
+[[./images/Cu-Cu-testdr.png]]
 #+caption:Bond-length-dependent stiffness of Cu-Cu bond with various displacement of perturbed atom. The left plot represents Cu-Cu stretching mode and right one represent Cu-Cu bending mode (dr means displacement of perturbed atom). label:fig-cucu 
-[[./Cu-Pd-testdr.png]]
+[[./images/Cu-Pd-testdr.png]]
 #+caption:Bond-length-dependant stiffness of Cu-Pd bond with various displacement of perturbed atom. The left plot represent stretching mode and right one represent the bending mode.(dr means displacement of perturbed atom) label:fig-cupd
-[[./Pd-Pd-testdr.png]]
+[[./images/Pd-Pd-testdr.png]]
 #+caption:Bond-length-dependent stiffness of Pd-Pd bond with different displacements of perturbed atom.  The left plot represent stretching mode and right one represent the bending mode.(dr means displacement of perturbed atom) label:fig-pdpd
  We try to decreases the criteria of convergence of EDIFFG=-1E-4. The result is shown in Figure ref:fig-cucu-testac, ref:fig-cupd-testac and ref:fig-pdpd-testac.
-[[./Cu-Cu-testaccurate.png]]
+[[./images/Cu-Cu-testaccurate.png]]
 #+caption: Bond-length-dependant stiffness of Cu-Cu bond  based on different convergence criteria. Left plot shows stretching mode and right plot shows bending mode. label:fig-cucu-testac  
-[[./Cu-Pd-testaccurate.png]]
+[[./images/Cu-Pd-testaccurate.png]]
 #+caption:Bond-length-dependant stiffness of Cu-Pd bond  based on different convergence criteria. Left plot shows stretching mode and right plot shows bending mode. label:fig-cupd-testac  
-[[./Pd-Pd-testaccurate.png]]
+[[./images/Pd-Pd-testaccurate.png]]
 #+caption:Bond-length-dependent stiffness of Pd-Pd bond  based on different convergence criteria. Left plot shows stretching mode and right plot shows bending mode. label:fig-pdpd-testac  
 Although force is more accurate, the resulting stiffness does not change much. It is hard to know whether this lost of convergence is really due to the lack of accuracy of force or for other reasons.   
 
@@ -110,42 +110,42 @@ So as to rule out the possibility of large error in static calculation and fitti
 Below, the convergence test on cutoff energy is performed at first with fixed k-points of 5X5X5 and displacement of perturbed atom of 0.1 $/Ang$. Radius of super-cell is set to be 9 $/Ang$. 
 
 
-[[./vib-fitfc-B2-encut.png]]
+[[./images/vib-fitfc-B2-encut.png]]
 #+caption: Vibrational free energy profile of CuPd bcc as function of cutoff energy. label:fig-encut-conver
 
-[[./vib-fitfc-0-encut.png]]
+[[./images/vib-fitfc-0-encut.png]]
 #+caption: Vibrational free energy profile of Cu fcc as function of cutoff energy. label:fig-encut-0-conver
 
-[[./vib-fitfc-1-encut.png]]
+[[./images/vib-fitfc-1-encut.png]]
 #+caption: Vibrational free energy profile of Pd fcc as function of cutoff energy. label:fig-encut-1-conver
 
-[[./vib-fitfc-27-encut.png]]
+[[./images/vib-fitfc-27-encut.png]]
 #+caption: Vibrational free energy profile of Cu3Pd L12 as function of cutoff energy. label:fig-encut-27-conver
 From figure ref:fig-encut-conver, ref:fig-encut-0-conver ,ref:fig-encut-1-conver, ref:fig-encut-27-conver, it is clear that encut does not have significant influence in vibrational calculation and cutoff energy of 350 eV is already sufficient.
 
 
 Figure ref:fig-kpts-3, ref:fig-kpts-0, ref:fig-kpts-1, ref:fig-kpts-27, are result of k-points convergence. 
 
-[[./vib-fitfc-3-kpts.png]]
+[[./images/vib-fitfc-3-kpts.png]]
 #+caption: Vibrational free energy profile of CuPd bcc as function of k-points density . label:fig-kpts-3
-[[./vib-fitfc-0-kpts.png]]
+[[./images/vib-fitfc-0-kpts.png]]
 #+caption: Vibrational free energy profile of Cu fcc as function of k-points density. label:fig-kpts-0
-[[./vib-fitfc-1-kpts.png]]
+[[./images/vib-fitfc-1-kpts.png]]
 #+caption: Vibrational free energy profile of Pd fcc as function of k-points density. label:fig-kpts-1
-[[./vib-fitfc-27-kpts.png]]
+[[./images/vib-fitfc-27-kpts.png]]
 #+caption: Vibrational free energy profile of Cu3Pd L12 as function of k-points density. label:fig-kpts-27
 Although there will be around 5 meV/atom difference in vibrational free energy, as shown in Figure ref:fig-kpts-3, most of structures are not significantly influenced by increasing k points density. Therefore, kpoints-density of 5X5X5 can reach vibrational free energy convergence of 5meV/atom and k-points density of 6X6X6 can reach vibrational free energy convergence of 1meV/atom. 
 
 
 Except for encut and k-points, the radius of super-cell also matters. A large radius, which is larger than three times the nearest neighbors, is necessary to ensure the element in force constant matrix is negligable at the boundary of super-cell.we start calculation from radius of 6 $/Ang$ to 10 $/Ang$ (number of atoms in super-cell varies from 16 atoms to 42 atoms). The encut and k points density are set to be 350 eV and 5X5X5 respectively. displacement of atom is 0.1 $/Ang$. 
 
-[[./vib-fitfc-3-er.png]]
+[[./images/vib-fitfc-3-er.png]]
 #+caption: Vibrational free energy of CuPd B2 structure as with different super-cell radius. label:fig-r-3
-[[./vib-fitfc-0-er.png]]
+[[./images/vib-fitfc-0-er.png]]
 #+caption: Vibrational free energy of Cu fcc structure with differernt super-cell radius. label:fig-r-0
-[[./vib-fitfc-1-er.png]]
+[[./images/vib-fitfc-1-er.png]]
 #+caption: Vibrational free energy of Pd fcc structure with various super-cell radius. label:fig-r-1
-[[./vib-fitfc-27-er.png]]
+[[./images/vib-fitfc-27-er.png]]
 #+caption: Vibrational free energy of Cu3Pd L12 structure as function of super-cell radius. label:fig-r-27
 As shown in Figure ref:fig-r-3, ref:fig-r-0, ref:fig-r-1, ref:fig-r-27, the vibrational free energy at lower temperature is well converged to 1 meV/atom. At high temperature of 900 K, only B2 CuPd structure shows a poor convergence (around 12 meV/atom compared with result of largest super-cell radius). This result indicates a super-cell radius of 10 $/Ang$ may be necessary for bcc structure and radius of 9 $/Ang$ is already sufficient for fcc. 
 
@@ -182,20 +182,20 @@ In the end, a convergence test for displacement of perturbed atom is also consid
 After the convergence test, a completed vibrational calculation is performed. The displacement of atom is set to be 0.2 $/Ang$ for FCC and 0.15 $/Ang$ for BCC. For Pd BCC, displacement of 0.015 $/Ang$ is used to avoid unstable mode.  The profile of vibrational enthalpy for bcc and fcc is shown in Figure ref:fig-fitfcbcc and ref:fig-fitfcfcc respectively. Then we combine the fcc and bcc in one plot with referenced energy of Cu fcc and Pd fcc.
 
 
-[[./fitfcbcc.png]]
+[[./images/fitfcbcc.png]]
 #+caption: Left plot is the vibrational free energy of B2 phase at various composition. Right plot shows the vibrational enthalpy of bcc as function of temperature (referenced energy is bcc Cu and bcc Pd). label:fig-fitfcbcc
 
-[[./fitfcfcc.png]]
+[[./images/fitfcfcc.png]]
 #+caption: Left plot is the vibrational free energy of fcc phase at various composition. Right plot shows the vibrational enthalpy of bcc fcc as function of temperature (referenced energy is fcc Cu and fcc Pd). label:fig-fitfcfcc
-[[./fitfc-sum.png]]
+[[./images/fitfc-sum.png]]
 
 #+caption: Vibrational enthalpy of bcc and fcc as function of temperature (referenced energy is fcc Cu and fcc Pd). label:fig-vib
 as is shown in Figure ref:fig-vib, the vibrational enthalpy of B2 region decreases as temperature goes up. The decreasing rate of vibrational enthalpy of B2 phase is obvious higher than FCC which indicates the expansion of B2 region due to the contribution of vibrational free energy. 
 
-[[./fitfc-ref.png]] 
+[[./images/fitfc-ref.png]] 
 #+caption: The vibrational free energy of Cu Pd in different phases. label:fig-ref
 We may wonder why the energy of B2 phase decreases when it is corrected by Cu fcc and Pd fcc. The figure ref:fig-ref can explain this observation. As the free energy of fcc phase is higher than that in bcc phase, correction of vibrational free energy of B2 phase will cause it lower than the vibrational free energy of fcc phase. 
-[[./vibentropy.png]]
+[[./images/vibentropy.png]]
 
 #+caption: Vibrational formation entropy of CuPd B2 phase and Cu3Pd L12 phase as function of temperature. label:fig-entro 
 
