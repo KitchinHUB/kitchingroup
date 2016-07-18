@@ -24,7 +24,7 @@
 - Teng :: Research update (15 min)
 - Devon :: Research update (15 min)
 
-*** [2016-07-15 Fri] 3pm DH1102
+*** DONE [2016-07-15 Fri] 3pm DH1102
 - Jake :: Research update (15 min)
 - Chen :: Research update (15 min)
 - Akshay :: Research update (15 min)
